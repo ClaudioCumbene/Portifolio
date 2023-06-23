@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cláudio's Portfolio</title>
+  <style>
+    body {
+      background-color: #212121;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("./assets/images/movie-ranking.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      box-sizing: border-box; 
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0e0d0d;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: transform 0.3s;
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+    }
+    .top{
+margin-bottom: 400px;
+
+    }
+
+    .typing::after {
+      content: "|";
+      animation: blink-caret 0.7s infinite;
+    }
+
+    @keyframes blink-caret {
+      50% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top">
+    <h1><span class="typing">Cláudio Aberto Cumbene</span></h1>
+    <h2><span class="typing">I'm a Web Developer</span></h2>
+  </div>
+
+  <div class="background-image">
+    <img src="" alt="">
+  </div>
+  
+  <div class="button-container">
+    <a class="button" href="#">Contact Us</a>
+  </div>
+
+  <script>
+    // Função para simular o efeito de digitação
+    function typeEffect(element, speed) {
+      const text = element.innerText;
+      element.innerText = "";
+      let i = 0;
+
+      function type() {
+        if (i < text.length) {
+          element.innerText += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        }
+      }
+
+      type();
+    }
+
+    
+    const h1 = document.querySelector("h1 .typing");
+    const h2 = document.querySelector("h2 .typing");
+
+    typeEffect(h1, 100);
+    setTimeout(() => typeEffect(h2, 100), 1500);
+  </script>
+
+
+</body>
+
+</html>
